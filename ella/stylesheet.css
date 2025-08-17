@@ -15,23 +15,21 @@ button:has(a[href*="talltreehealth.ca/contact-us"]):hover {
   color: hsl(var(--accent-foreground)) !important;
 }
 
-/* Fade + lift animation for action buttons, slightly delayed */
+/* Smooth, natural fade-in for action buttons */
 div[data-step-type="assistant_message"] button {
-  will-change: opacity, transform;
   opacity: 0;
-  transform: translateY(15px) scale(0.96);
-  animation: fadeLiftIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.2s;
-  transition: opacity 0.3s ease;
+  transform: translateY(6px);
+  animation: fadeInUp 0.35s ease-out forwards;
+  animation-delay: 0.15s;
 }
 
-/* Keyframes used by both text and buttons for consistent effect */
-@keyframes fadeLiftIn {
+@keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
+
 
 
 
